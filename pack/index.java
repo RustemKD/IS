@@ -162,3 +162,170 @@ public class index extends JFrame{
 		a2 = new JTextField();
 		b2 = new JTextField();
 		kol2 = new JTextField();
+		
+		m3 = new JTextField();
+		a3 = new JTextField();
+		b3 = new JTextField();
+		kol3 = new JTextField();
+		
+		m4 = new JTextField();
+		a4 = new JTextField();
+		b4 = new JTextField();
+		kol4 = new JTextField();
+		
+		m5 = new JTextField();
+		a5 = new JTextField();
+		b5 = new JTextField();
+		kol5 = new JTextField();
+		
+		m6 = new JTextField();
+		a6 = new JTextField();
+		b6 = new JTextField();
+		kol6 = new JTextField();
+    	
+		//новые компоненты флажок
+		f2 = new JCheckBox();
+		f3 = new JCheckBox();
+		f4 = new JCheckBox();
+		f5 = new JCheckBox();
+		f6 = new JCheckBox();
+
+		//выравнивание флажков по правому краю
+		f2.setHorizontalAlignment(JCheckBox.RIGHT); 
+		f3.setHorizontalAlignment(JCheckBox.RIGHT); 
+		f4.setHorizontalAlignment(JCheckBox.RIGHT); 
+		f5.setHorizontalAlignment(JCheckBox.RIGHT); 
+		f6.setHorizontalAlignment(JCheckBox.RIGHT); 
+		//выравнивание текста по центру
+		a1.setHorizontalAlignment(JTextField.CENTER); 
+		a2.setHorizontalAlignment(JTextField.CENTER); 
+		a3.setHorizontalAlignment(JTextField.CENTER); 
+		a4.setHorizontalAlignment(JTextField.CENTER); 
+		a5.setHorizontalAlignment(JTextField.CENTER); 
+		a6.setHorizontalAlignment(JTextField.CENTER); 
+		b1.setHorizontalAlignment(JTextField.CENTER); 
+		b2.setHorizontalAlignment(JTextField.CENTER); 
+		b3.setHorizontalAlignment(JTextField.CENTER);
+		b4.setHorizontalAlignment(JTextField.CENTER); 
+		b5.setHorizontalAlignment(JTextField.CENTER); 
+		b6.setHorizontalAlignment(JTextField.CENTER); 
+		kol1.setHorizontalAlignment(JTextField.CENTER); 
+		kol2.setHorizontalAlignment(JTextField.CENTER); 
+		kol3.setHorizontalAlignment(JTextField.CENTER); 
+		kol4.setHorizontalAlignment(JTextField.CENTER); 
+		kol5.setHorizontalAlignment(JTextField.CENTER); 
+		kol6.setHorizontalAlignment(JTextField.CENTER); 
+
+		
+		//Добавление компонентов JLabel, JTextField на панель panel,panel1,panel2
+		panel.add(label_7);
+		panel.add(s);
+		
+		panel1.add(label_0);
+		panel1.add(label_1);
+		panel1.add(label_2);
+		panel1.add(label_3);
+		panel1.add(label_4);
+		panel1.add(label_5);
+		panel1.add(label_6);
+
+		panel1.add(label_f1);
+		panel1.add(m1);
+		panel1.add(a1);
+		panel1.add(b1);
+		panel1.add(c1);
+		panel1.add(kol1);
+		panel1.add(s1);
+		
+		panel1.add(f2);
+		panel1.add(m2);
+		panel1.add(a2);
+		panel1.add(b2);
+		panel1.add(c2);
+		panel1.add(kol2);
+		panel1.add(s2);
+		
+		panel1.add(f3);
+		panel1.add(m3);
+		panel1.add(a3);
+		panel1.add(b3);
+		panel1.add(c3);
+		panel1.add(kol3);
+		panel1.add(s3);
+		
+		panel1.add(f4);
+		panel1.add(m4);
+		panel1.add(a4);
+		panel1.add(b4);
+		panel1.add(c4);
+		panel1.add(kol4);
+		panel1.add(s4);
+		
+		panel1.add(f5);
+		panel1.add(m5);
+		panel1.add(a5);
+		panel1.add(b5);
+		panel1.add(c5);
+		panel1.add(kol5);
+		panel1.add(s5);
+		
+		panel1.add(f6);
+		panel1.add(m6);
+		panel1.add(a6);
+		panel1.add(b6);
+		panel1.add(c6);
+		panel1.add(kol6);
+		panel1.add(s6);
+
+		panel2.add(button);//Добавление кнопки на панель panel2
+		//Добавление компонентов JLabel, JTextField на панель panel,panel1,panel2
+		
+		//флажок снят, значит запрещаем изменение текстовых полей
+		m2.setEditable(false); 
+		a2.setEditable(false); 
+		b2.setEditable(false);
+		kol2.setEditable(false);
+		
+		m3.setEditable(false); 
+		a3.setEditable(false); 
+		b3.setEditable(false);
+		kol3.setEditable(false);
+		
+		m4.setEditable(false); 
+		a4.setEditable(false); 
+		b4.setEditable(false);
+		kol4.setEditable(false);
+		
+		m5.setEditable(false); 
+		a5.setEditable(false); 
+		b5.setEditable(false);
+		kol5.setEditable(false);
+		
+		m6.setEditable(false); 
+		a6.setEditable(false); 
+		b6.setEditable(false);
+		kol6.setEditable(false);
+		
+		f3.setVisible(false);
+		f4.setVisible(false);
+		f5.setVisible(false);
+		f6.setVisible(false);
+
+
+
+
+		f2.addItemListener(new ItemListener(){  /*Для компонента флажок устанавливаем слушатель события  
+			Если нажать на компонент - сработает проверка выбран флажок или снят */                                                     
+			public void itemStateChanged(ItemEvent e)
+			/*. В теле метода itemStateChanged располагается код, который выполняется при смене состояния флажка. */
+			{
+				if (e.getSource()==f2) //если событие произошло именно с флажком CheckBox_100km, то выполняется следующее
+					if(e.getStateChange()==1){ //если флажок в состоянии '1'-значит он выбран, если 0 - снят
+						a2.setEditable(true); //так как флажок включен разрешаем изменение текстового поля
+						b2.setEditable(true);
+						kol2.setEditable(true);
+						m2.setEditable(true); 		
+						f3.setVisible(true);
+
+						t2=1; //переменная отвечающая за состояние компонента флажок (1 - включен)
+					}
